@@ -3,6 +3,8 @@
     --title-color-second: #212121;
     --paragraph-color: #757575;
     --accent-color: #2196F3;
+    --gap-between-section: 94px;
+    --gap-in-section: 30px;
 }
 
 body{
@@ -10,15 +12,26 @@ body{
     sans-serif;
     background-color: #ffffff;
 }
-
+/* reset styles */
 .link{
     text-decoration: none;
 }
 
 .list{
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
 }
 
+img {
+    display: block;
+    width: 100%;
+}
+
+/* container */
 .container{
     width: 1200px;
     padding-left: 15px;
@@ -35,10 +48,30 @@ body{
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--accent-color);
+    margin-right: 90px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .logo-header-second{
     color: #000000;
+}
+
+.header .container{
+    display: flex;
+    align-items: center;
+}
+
+.header-list{
+    display: flex;
+}
+
+.header-item:not(:last-child){
+    margin-right: 50px;
+}
+
+.container .header-list{
+    margin-left: auto;
 }
 
 .header-link{
@@ -70,6 +103,7 @@ body{
 
 .hero{
     background: #2F303A;
+    margin-bottom: var(--gap-between-section);
 }
 
 .hero-title{
@@ -80,9 +114,11 @@ body{
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--title-color);
+    margin-bottom: var(--gap-in-section);
 }
 
 .hero-btn{
+    display: block;
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -96,6 +132,7 @@ body{
     cursor: pointer;
     padding: 10px 32px;
     border: transparent;
+    margin: 0 auto;
 }
 
 .hero-btn:hover, .hero-btn:focus{
@@ -103,6 +140,17 @@ body{
 }
 
 /* section benefits */
+.benefits{
+    margin-bottom: var(--gap-between-section);
+}
+
+.benefits-list{
+    display: flex;
+}
+
+.benefits-item:not(:first-child){
+    margin-left: var(--gap-in-section);
+}
 
 .benefits-title{
     font-weight: 700;
@@ -111,6 +159,7 @@ body{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--title-color-second);
+    margin-bottom: 10px;
 }
 
 .benefits-text{
@@ -121,6 +170,11 @@ body{
 }
 
 /* section about */
+
+.about{
+    margin-bottom: var(--gap-between-section);
+}
+
 .about-title{
     font-weight: 700;
     font-size: 36px;
@@ -128,13 +182,32 @@ body{
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-color-second);
+    margin-bottom: 50px;
+}
+
+.about-list{
+    display: flex;
+    
+}
+
+.about-item:not(:first-child){
+    margin-left: var(--gap-in-section);
 }
 
 
 /* section team */
 
 .team{
-    background-color: #F5F4FA;;
+    background-color: #F5F4FA;
+    padding-bottom: var(--gap-between-section);
+}
+
+.team-list{
+    display: flex;
+}
+
+.team-item:not(:first-child) {
+    margin-left: var(--gap-in-section);
 }
 
 .team-title{
@@ -144,6 +217,8 @@ body{
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-color-second);
+    margin-bottom: 50px;
+    padding-top: 94px;
 }
 
 .team-item{
@@ -155,6 +230,10 @@ body{
 
 }
 
+.team-img{
+    margin-bottom: var(--gap-in-section);
+}
+
 .team-after-title{
     font-weight: 500;
     font-size: 16px;
@@ -162,6 +241,7 @@ body{
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-color-second);
+    margin-bottom: 10px;
 }
 
 .team-text{
@@ -170,22 +250,30 @@ body{
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--paragraph-color);
+    margin-bottom: var(--gap-in-section);
 }
 
 /* footer */
 
 .footer{
-    background-color: #2F303A;;
+    background-color: #2F303A;
 }
 
 .footer-address{
     font-style: normal;
+}
+.footer-list{
+    padding-bottom: 60px;
 }
 
 .footer-item{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+}
+
+.footer-item:not(:last-child){
+    margin-bottom: 9px;
 }
 
 .footer-link-address{
@@ -207,6 +295,7 @@ body{
 
 
 .logo-footer-first {
+    display: block;
     font-family: 'Raleway',
     sans-serif;
     font-weight: 700;
@@ -214,6 +303,8 @@ body{
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--accent-color);
+    padding-top: 60px;
+    margin-bottom: 20px;
 }
 
 .logo-footer-second {

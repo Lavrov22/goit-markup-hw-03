@@ -12,6 +12,24 @@ body{
     sans-serif;
     background-color: #ffffff;
 }
+
+.section{
+    padding: 94px 0;
+}
+
+.visually-hidden{
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
 /* reset styles */
 .link{
     text-decoration: none;
@@ -29,6 +47,7 @@ h1,h2,h3,h4,h5,h6,p{
 img {
     display: block;
     width: 100%;
+    height: auto;
 }
 
 /* container */
@@ -107,7 +126,6 @@ img {
 
 .hero{
     background: #2F303A;
-    margin-bottom: var(--gap-between-section);
 }
 
 .hero-title{
@@ -118,6 +136,9 @@ img {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--title-color);
+    width: 696px;
+    margin: var(--gap-in-section);
+    margin: 0 auto;
     margin-bottom: var(--gap-in-section);
 }
 
@@ -144,9 +165,6 @@ img {
 }
 
 /* section benefits */
-.benefits{
-    margin-bottom: var(--gap-between-section);
-}
 
 .benefits-list{
     display: flex;
@@ -181,7 +199,7 @@ img {
 /* section about */
 
 .about{
-    margin-bottom: var(--gap-between-section);
+    padding-top: 0px;
 }
 
 .about-title{
@@ -207,12 +225,10 @@ img {
     margin-left: var(--gap-in-section);
 }
 
-
 /* section team */
 
 .team{
     background-color: #F5F4FA;
-    padding-bottom: var(--gap-between-section);
 }
 
 .team-list{
@@ -237,7 +253,6 @@ width: calc((100% - 90px) / 4 );
     letter-spacing: 0.03em;
     color: var(--title-color-second);
     margin-bottom: 50px;
-    padding-top: var(--gap-between-section);
 }
 
 .team-item{
@@ -249,8 +264,9 @@ width: calc((100% - 90px) / 4 );
 
 }
 
-.team-img{
-    margin-bottom: var(--gap-in-section);
+.team-wrapper{
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .team-after-title{
@@ -260,7 +276,6 @@ width: calc((100% - 90px) / 4 );
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-color-second);
-    margin-bottom: 10px;
 }
 
 .team-text{
@@ -269,20 +284,18 @@ width: calc((100% - 90px) / 4 );
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--paragraph-color);
-    margin-bottom: var(--gap-in-section);
 }
 
 /* footer */
 
 .footer{
     background-color: #2F303A;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .footer-address{
     font-style: normal;
-}
-.footer-list{
-    padding-bottom: 60px;
 }
 
 .footer-item{
@@ -322,7 +335,6 @@ width: calc((100% - 90px) / 4 );
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--accent-color);
-    padding-top: 60px;
     margin-bottom: 20px;
 }
 
@@ -333,14 +345,10 @@ width: calc((100% - 90px) / 4 );
 
 /* page portfolio */
 
-.portfolio{
-    margin-top: var(--gap-between-section);
-    margin-bottom: var(--gap-between-section);
-}
-
 .portfolio-list-first{
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }
 .porfolio-item-first:not(:first-child){
     margin-left: 8px;
@@ -359,7 +367,6 @@ width: calc((100% - 90px) / 4 );
     padding: 6px 22px;
     border: transparent;
     color: var(--title-color-second);
-    margin-bottom: 50px;
 }
 
 .portfolio-btn:focus, .portfolio-btn:hover{
@@ -376,7 +383,6 @@ width: calc((100% - 90px) / 4 );
 }
 
 .portfolio-item-second{
-    border: 1px solid #EEEEEE;
     width: calc((100% - 60px) / 3);
 }
 
@@ -384,23 +390,23 @@ width: calc((100% - 90px) / 4 );
     margin-left: var(--gap-in-section);
 }
 
-.portfolio-item-second:not(:nth-last-child(-n + 3)){
+.portfolio-item-second:not(:nth-last-child(-n + 3)) {
     margin-bottom: var(--gap-in-section);
 }
 
-.portfolio-img{
-    margin-bottom: 20px;
+.portfolio-item-wrapper{
+    padding: 20px 24px 20px 24px;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
 }
-
 
 .portfolio-title{
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--title-color-second);
-    margin-bottom: 4px;
-    padding-left: 24px;
+    color: var(--title-color-second);   
 }
 
 .portfolio-text{
@@ -409,7 +415,5 @@ width: calc((100% - 90px) / 4 );
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--paragraph-color);
-    margin-bottom: 20px;
-    padding-left: 24px;
 }
 
